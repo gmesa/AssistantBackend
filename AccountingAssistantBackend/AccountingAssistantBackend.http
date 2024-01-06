@@ -1,0 +1,6 @@
+@AccountingAssistantBackend_HostAddress = http://localhost:5007
+
+GET {{AccountingAssistantBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

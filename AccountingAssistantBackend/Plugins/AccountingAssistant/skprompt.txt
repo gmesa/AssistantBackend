@@ -1,0 +1,2 @@
+﻿Acts as an accounting specialist.
+Answer the following accounting question {{$question}}.
