@@ -2,12 +2,12 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AccountingAssistantBackend.Controllers
+namespace AccountingAssistantBackend.Controllers.v1
 {
     /// <summary>
     /// Accounting Controller
     /// </summary>
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     public class AccountingController : ControllerBase
     {
@@ -38,5 +38,5 @@ namespace AccountingAssistantBackend.Controllers
 
             return NotFound();
         }
-    }       
+    }
 }

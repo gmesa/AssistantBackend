@@ -1,5 +1,6 @@
 ﻿using AccountingAssistantBackend.Infrastructure.Configuration;
 using Microsoft.SemanticKernel;
+using System.Reflection;
 
 
 namespace AccountingAssistantBackend.Extensions
@@ -17,14 +18,15 @@ namespace AccountingAssistantBackend.Extensions
             services.Configure<CustomExceptionHandlerOptions>(configuration.GetSection(CustomExceptionHandlerOptions.SectionName));
             return services;
         }
-       
+
         /// <summary>
         /// Adds a semantic kernel with chat completions to the specified service collection.
         /// </summary>
         /// <param name="services">The service collection to add the semantic kernel to.</param>
         /// <param name="config">The configuration manager to retrieve OpenAI options from</param>
         /// <returns>The modified service collection</returns>
-        public static IServiceCollection AddSemanticKernelWithChatCompletions(this IServiceCollection services, IConfigManager config) {
+        public static IServiceCollection AddSemanticKernelWithChatCompletions(this IServiceCollection services, IConfigManager config)
+        {
 
             var openAIOptions = config.OpenAIOptions;
 
@@ -33,6 +35,19 @@ namespace AccountingAssistantBackend.Extensions
                 .AddOpenAIChatCompletion(openAIOptions.CompletionModel, openAIOptions.ApiKey, openAIOptions.OrganizationId)
                 .Build();
             services.AddSingleton(kernel);
+            return services;
+
+        }
+
+        /// <summary>
+        /// Add mapper profiles
+        /// </summary>
+        /// <param name="services">Service collections</param>
+        /// <returns></returns>
+        public static IServiceCollection AddAutomapperProfile(this IServiceCollection services)
+        {
+
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
             return services;
 
         }
