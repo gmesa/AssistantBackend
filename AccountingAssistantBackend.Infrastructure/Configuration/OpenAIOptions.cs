@@ -16,5 +16,7 @@ namespace AccountingAssistantBackend.Infrastructure.Configuration
         public string CompletionModel { get; set; }
 
         public string OrganizationId { get; set; }
+
+        public int MaxTokens { get; set; } 
     }
 }

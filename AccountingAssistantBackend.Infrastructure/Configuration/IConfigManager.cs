@@ -19,6 +19,16 @@ namespace AccountingAssistantBackend.Infrastructure.Configuration
         /// </summary>
         OpenAIOptions OpenAIOptions { get; }
 
+        /// <summary>
+        /// Gets the options for summary text
+        /// </summary>
+        SummaryTextOptions SummaryTextOptions { get; }
+
+        /// <summary>
+        /// Gets the options for chat messages
+        /// </summary>
+        ChatOptions ChatOptions { get; }
+
 
     }
 }

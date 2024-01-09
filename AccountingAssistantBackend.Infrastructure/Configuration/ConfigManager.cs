@@ -14,9 +14,13 @@ namespace AccountingAssistantBackend.Infrastructure.Configuration
 
         public IConfiguration Configuration { get; }
 
-       public CustomExceptionHandlerOptions CustomExceptionHandlerOptions { get => GetSection<CustomExceptionHandlerOptions>(CustomExceptionHandlerOptions.SectionName); }
+        public CustomExceptionHandlerOptions CustomExceptionHandlerOptions { get => GetSection<CustomExceptionHandlerOptions>(CustomExceptionHandlerOptions.SectionName); }
 
-       public  OpenAIOptions OpenAIOptions { get => GetSection<OpenAIOptions>(nameof(OpenAIOptions)); }
+        public OpenAIOptions OpenAIOptions { get => GetSection<OpenAIOptions>(nameof(OpenAIOptions)); }
+
+        public SummaryTextOptions SummaryTextOptions { get => GetSection<SummaryTextOptions>(nameof(SummaryTextOptions)); }
+
+        public ChatOptions ChatOptions { get => GetSection<ChatOptions>(nameof(ChatOptions)); }
 
     }
 }

@@ -1,0 +1,2 @@
+﻿You are a helpful assistant for text summarization. Summarize concisely, extracting key points. Ignore irrelevant content.
+Ensure readability using paragraph breaks, and avoid phrases like 'in conclusion' or 'in summary. Use this text {{$current_chunk}}.

@@ -60,7 +60,7 @@ builder.Services
     .AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("Assistant"));
 
 builder.Services
-    .AddScoped<IAccountingManager, AccountingManager>()
+    .AddScoped<IAssistantManager, AssistantManager>()
     .AddScoped<ISessionChatManager, SessionChatManager>()
     .AddScoped<IChatMessageManager, ChatMessageManager>()
     .AddScoped<ISessionChatRepository, SessionChatRepository>()

@@ -1,7 +1,7 @@
 {
     "schema": 1,
     "type": "completion",
-    "description": "Answer accounting question",
+    "description": "Summary text",
     "execution_settings": {
         "default": {
             "max_tokens": 2000,
@@ -14,14 +14,14 @@
         },
         "gpt-4": {
             "model_id": "gpt-4-1106-preview",
-            "max_tokens": 100,
+            "max_tokens": 2000,
             "temperature": 0.3
         }
     },
     "input": {
         "parameters": [
             {
-                "name": "question",
+                "name": "[PREVIOUS_SUMMARY]",
                 "description": "The question wich should be answered",
                 "defaultValue": ""
             }

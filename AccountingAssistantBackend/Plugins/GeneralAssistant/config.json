@@ -1,7 +1,7 @@
 {
     "schema": 1,
     "type": "completion",
-    "description": "Answer accounting question",
+    "description": "Answer question about the general topics",
     "execution_settings": {
         "default": {
             "max_tokens": 2000,
